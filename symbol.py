@@ -4,7 +4,7 @@ import sys
 
 def selector():
     types = ['and', 'as', 'assert', 'pass', 'break', 'class', 'continue', 'def', 'del', 'elif',
-     'else', 'except', 'exec']
+     'else', 'except', 'exec', 'finally', 'for', 'from']
 
     print("\n")
     print("Python has many symbols and words to learn. This program has been designed to help you if you get stuck.")
@@ -42,8 +42,12 @@ def selector():
         except1()
     elif "exec" == choice:
         exec1()
-
-
+    elif "finally" == choice:
+        finally1()
+    elif "for" == choice:
+        for1()
+    elif "from" == choice:
+        from1()
     else:
         selector()
 
@@ -357,6 +361,87 @@ def exec1():
     print("\n")
     exec("print('Ive used exec to print this sentence.')")
     print("\n")
+    play = input(" Hit enter to search for another Symbol.")
+    selector()
+
+def finally1():
+    print("\n")
+    print("The finally block will run regadless of the outcome of your code. As in 'finally' do this no matter what.")
+    print("""This can be used a long with 'Try' and 'Except'
+    x = 10
+    try:
+        print(x)
+        print(y)
+    except:
+        print("An exception occurred")
+    finally:
+        print("This will print regardless of whether there is a syntax error or not.")     """)
+    print("\n")
+    #The working code is below.
+    x = 10
+    try:
+        print(x)
+        print(y)
+    except:
+        print("An exception occurred")
+    finally:
+        print("This will print regardless of whether there is a syntax error or not.")
+
+    print("\n")
+    play = input(" Hit enter to search for another Symbol.")
+    selector()
+
+def for1():
+    print("\n")
+    print("'for' as in 'for loop'.")
+    print("A for loop is used to loop a sequence or list.")
+    print("In the example below the loop is printing each letter at a time until it comes to the end of the sequence.")
+    print("\n")
+    print("""
+    text = "python"
+
+    for character in text:
+        print(character)""")
+    #The working code is below.
+    text = "python"
+
+    for character in text:
+        print(character)
+
+    print("\n")
+    play = input(" Hit enter to search for another Symbol.")
+    selector()
+
+def from1():
+    print("\n")
+    print("You will need to import modules in python all the time.")
+    print("Sometimes it is better to import just the function you need from that module.")
+    print("""For example I have created a module called 'from_example' and created 3 different functions
+
+    This is what the module looks like.
+    def fruit1():
+        apple = 1
+        print(f"You have {apple} apple.")
+
+    def fruit2():
+        apple = 2
+        print(f"You have {apple} apples.")
+
+    def fruit3():
+        apple = 3
+        print(f"You have {apple} apples.")
+
+    Each function gives a different value for apple. In our example we want to import def fruit2 only.
+    This is what our from statement looks like.
+
+    from from_example import fruit2
+    print(fruit2())'     """)
+    print("\n")
+    #The working code is below.
+    from from_example import fruit2
+    print(fruit2())
+    print("\n")
+
     play = input(" Hit enter to search for another Symbol.")
     selector()
 
