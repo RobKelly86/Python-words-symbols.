@@ -1,10 +1,13 @@
 # This programme is a user gudie to python Symbols.
 
 import sys
+var = "This is my global variable."
+var2 = "This is my second global variable."
+
 
 def selector():
     types = ['and', 'as', 'assert', 'pass', 'break', 'class', 'continue', 'def', 'del', 'elif',
-     'else', 'except', 'exec', 'finally', 'for', 'from']
+     'else', 'except', 'exec', 'finally', 'for', 'from', 'global', 'if', 'import']
 
     print("\n")
     print("Python has many symbols and words to learn. This program has been designed to help you if you get stuck.")
@@ -48,6 +51,12 @@ def selector():
         for1()
     elif "from" == choice:
         from1()
+    elif "global" == choice:
+        global1()
+    elif "if" == choice:
+        if1()
+    elif "import" == choice:
+        import1()
     else:
         selector()
 
@@ -442,6 +451,79 @@ def from1():
     print(fruit2())
     print("\n")
 
+    play = input(" Hit enter to search for another Symbol.")
+    selector()
+
+def global1():
+    print("\n")
+    print("A variable that is created outside of a function is called a global variable.")
+    print(f"I can call a global variable inside any function. -> {var}.")
+    print("\n")
+    print("""If you want to amend a variable inside a funtion you need to write 'global variable_name' inside your function.
+    global var2
+    var2 = "edited variable"
+    print(f"Python has used the '{var2}' because I wrote 'global var2' in the function.")""")
+    print("\n")
+    #The working code is below.
+    global var2
+    var2 = "edited variable"
+    print(f"Python has used the '{var2}' because I wrote 'global var2' in the function.")
+    print("\n")
+
+    play = input(" Hit enter to search for another Symbol.")
+    selector()
+
+def if1():
+    print("\n")
+    print("An 'if' statement is used when you want a decision to be made.")
+    print("""
+    a = int(input())
+
+    if a == 2:
+        print("Python has checked 'if' you entered 2. In this case you did.")
+    elif a != 2:
+        print("Python has checked 'if' you entered 2. In this case you did not.")
+    """)
+
+    #The working code is below.
+    print("Please enter the number '2' below. Python will use the if statement to see if you have entered '2'.")
+    a = int(input())
+    if a == 2:
+        print("Python has checked 'if' you entered 2. In this case you did.")
+    elif a != 2:
+        print("Python has checked 'if' you entered 2. In this case you did not.")
+    print("\n")
+    play = input(" Hit enter to search for another Symbol.")
+    selector()
+
+    print("\n")
+    play = input(" Hit enter to search for another Symbol.")
+    selector()
+
+def import1():
+    print("\n")
+    print("Import is used when you want to import a module to use in your programme.")
+    print("\n")
+    print("These can be common modules such as 'NumPy', 'Pandas' or 'Django'.")
+    print("Or you can create and use your own modules.")
+    print("To insall a module you would need to use pip install on your terminal.")
+    print("\n")
+    print("""This is how you would import the module. I have created a module named 'yourname'
+    in that module it has a function 'namer' as shown below.
+
+    def namer(name):
+        print(f"Hello {name}, nice to meet you.")
+
+    to import this into your file you would use the below code.
+
+    import yourname
+    yourname.namer("Rob")
+        """)
+    #The working code is below.
+    import yourname
+    yourname.namer("Rob")
+
+    print("\n")
     play = input(" Hit enter to search for another Symbol.")
     selector()
 
