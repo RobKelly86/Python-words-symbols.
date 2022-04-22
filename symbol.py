@@ -7,7 +7,8 @@ var2 = "This is my second global variable."
 
 def selector():
     types = ['and', 'as', 'assert', 'pass', 'break', 'class', 'continue', 'def', 'del', 'elif',
-     'else', 'except', 'exec', 'finally', 'for', 'from', 'global', 'if', 'import']
+     'else', 'except', 'exec', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is',
+     'lambda', 'not', 'or', 'print', 'raise', 'return', 'try', 'while', 'with']
 
     print("\n")
     print("Python has many symbols and words to learn. This program has been designed to help you if you get stuck.")
@@ -57,6 +58,28 @@ def selector():
         if1()
     elif "import" == choice:
         import1()
+    elif "in" == choice:
+        in1()
+    elif "is" == choice:
+        is1()
+    elif "lambda" == choice:
+        lambda1()
+    elif "not" == choice:
+        not1()
+    elif "or" == choice:
+        or1()
+    elif "print" == choice:
+        print1()
+    elif "raise" == choice:
+        raise1()
+    elif "return" == choice:
+        return1()
+    elif "try" == choice:
+        try1()
+    elif "while" == choice:
+        while1()
+    elif "with" == choice:
+        with1()
     else:
         selector()
 
@@ -77,7 +100,7 @@ def and1():
     elif a != b:
         print("Becuase you entered different values then this is false.")
     print("\n")
-    play = input(" Hit enter to search for another Symbol.")
+    play = input(" Hit enter to search for another word.")
     selector()
 
 def as1():
@@ -87,7 +110,7 @@ def as1():
     print("""Part of the with-as statement. For example, with X as Y: Pass """)
     print("")
     print("\n")
-    play = input(" Hit enter to search for another Symbol.")
+    play = input(" Hit enter to search for another word.")
     selector()
 
 def pass1():
@@ -104,7 +127,7 @@ def pass1():
         Once you have finished the function you can remove the pass""")
     #The working code is below.
     print("\n")
-    play = input(" Hit enter to search for another Symbol.")
+    play = input(" Hit enter to search for another word.")
     selector()
 
 def assert1():
@@ -122,7 +145,7 @@ def assert1():
     passport_number = input("Hello, please enter your passport number. ")
     assert len(passport_number)==9
     print("\n")
-    play = input(" Hit enter to search for another Symbol.")
+    play = input(" Hit enter to search for another word.")
     selector()
 
 def break1():
@@ -143,7 +166,7 @@ def break1():
         print(numbers)
 
     print("\n")
-    play = input(" Hit enter to search for another Symbol.")
+    play = input(" Hit enter to search for another word.")
     selector()
 
 def class1():
@@ -191,7 +214,7 @@ def class1():
     human.speaks()
 
     print("\n")
-    play = input(" Hit enter to search for another Symbol.")
+    play = input(" Hit enter to search for another word.")
     selector()
 
 def continue1():
@@ -214,7 +237,7 @@ def continue1():
         print(numbers)
 
     print("\n")
-    play = input(" Hit enter to search for another Symbol.")
+    play = input(" Hit enter to search for another word.")
     selector()
     pass
 
@@ -234,7 +257,7 @@ def def1():
     print("You can then use that function anywhere in your script by typing clac()")
 
     print("\n")
-    play = input(" Hit enter to search for another Symbol.")
+    play = input(" Hit enter to search for another word.")
     selector()
 
 def del1():
@@ -258,7 +281,7 @@ def del1():
     print("\n")
     print("As you will be able to see, I ran the script and Leicester has been deleted from the dictonary")
     print("\n")
-    play = input(" Hit enter to search for another Symbol.")
+    play = input(" Hit enter to search for another word.")
     selector()
 
 def elif1():
@@ -297,7 +320,7 @@ def elif1():
         elif1()
 
     print("\n")
-    play = input(" Hit enter to search for another Symbol.")
+    play = input(" Hit enter to search for another word.")
     selector()
 
 def else1():
@@ -335,7 +358,7 @@ def else1():
         else1()
 
     print("\n")
-    play = input(" Hit enter to search for another Symbol.")
+    play = input(" Hit enter to search for another word.")
     selector()
 
 def except1():
@@ -360,7 +383,7 @@ def except1():
         print("An exception occurred")
 
     print("\n")
-    play = input(" Hit enter to search for another Symbol.")
+    play = input(" Hit enter to search for another word.")
     selector()
 
 def exec1():
@@ -370,7 +393,7 @@ def exec1():
     print("\n")
     exec("print('Ive used exec to print this sentence.')")
     print("\n")
-    play = input(" Hit enter to search for another Symbol.")
+    play = input(" Hit enter to search for another word.")
     selector()
 
 def finally1():
@@ -397,7 +420,7 @@ def finally1():
         print("This will print regardless of whether there is a syntax error or not.")
 
     print("\n")
-    play = input(" Hit enter to search for another Symbol.")
+    play = input(" Hit enter to search for another word.")
     selector()
 
 def for1():
@@ -418,7 +441,7 @@ def for1():
         print(character)
 
     print("\n")
-    play = input(" Hit enter to search for another Symbol.")
+    play = input(" Hit enter to search for another word.")
     selector()
 
 def from1():
@@ -451,7 +474,7 @@ def from1():
     print(fruit2())
     print("\n")
 
-    play = input(" Hit enter to search for another Symbol.")
+    play = input(" Hit enter to search for another word.")
     selector()
 
 def global1():
@@ -470,7 +493,7 @@ def global1():
     print(f"Python has used the '{var2}' because I wrote 'global var2' in the function.")
     print("\n")
 
-    play = input(" Hit enter to search for another Symbol.")
+    play = input(" Hit enter to search for another word.")
     selector()
 
 def if1():
@@ -493,11 +516,7 @@ def if1():
     elif a != 2:
         print("Python has checked 'if' you entered 2. In this case you did not.")
     print("\n")
-    play = input(" Hit enter to search for another Symbol.")
-    selector()
-
-    print("\n")
-    play = input(" Hit enter to search for another Symbol.")
+    play = input(" Hit enter to search for another word.")
     selector()
 
 def import1():
@@ -524,7 +543,251 @@ def import1():
     yourname.namer("Rob")
 
     print("\n")
-    play = input(" Hit enter to search for another Symbol.")
+    play = input(" Hit enter to search for another word.")
     selector()
+
+def in1():
+    print("\n")
+    print("'in' as in 'for character in text' or 'for i in range'.")
+    print(".")
+    print("In the example below the loop that runs from 0 to 4. Each time it loops it will print 'i' the number.")
+    print("\n")
+    print("""
+    for i in range(5):
+        print i
+        """)
+    print("\n")
+    #The working code is below.
+    for i in range(5):
+        print (i)
+    print("\n")
+    play = input(" Hit enter to search for another word.")
+    selector()
+
+def is1():
+    print("\n")
+    print("This is operator in Python is use to test if something is true or false.")
+    print("For example 1 is 1 == True. Because 1 does equal 1.")
+    print(""" With the below code we are asking if x and c are the same value.
+    x = 1
+    c = 1
+
+    if (x is c):
+        print("Both X and C have a value of 1.")
+    else:
+        print("X and C have different values.")  """)
+    print("\n")
+    #The working code is below.
+    x = 1
+    c = 1
+
+    if (x is c):
+        print("Both X and C have a value of 1.")
+    else:
+        print("X and C have different values.")
+    print("\n")
+    play = input(" Hit enter to search for another word.")
+    selector()
+
+def lambda1():
+    print("\n")
+    print("A Lambda function is an anonymous function. This would be a function that doesn't use 'def'.")
+    print("Below we have defined the function 'double' without using def. we have then run the function with the argument '10'.")
+    print("""
+    double = lambda n:n*2
+    print(double(10))
+    """)
+    print("\n")
+    #The working code is below.
+    double = lambda n:n*2
+    print(double(10))
+
+    print("\n")
+    play = input(" Hit enter to search for another word.")
+    selector()
+
+def not1():
+    print("\n")
+    print("not in python is logic. not true == false.")
+    print("The script below asks the user for an input. Depending on the input it will decide if the value is 'not' more than 10.")
+    print("""
+    print("Please type your value for A")
+    a = int(input())
+    if not a > 10:
+        print("The value you entered is 10 or less.")
+    else:
+        print("The value you entered is greater than 10.")
+               """)
+
+    print("\n")
+    #The working code is below.
+    print("Please type your value for A")
+    a = int(input())
+    if not a > 10:
+        print("The value you entered is 10 or less.")
+    else:
+        print("The value you entered is greater than 10.")
+
+    print("\n")
+    play = input(" Hit enter to search for another word.")
+    selector()
+
+def or1():
+    print("\n")
+    print("Description")
+    print("\n")
+    print("""Logical Or. For example, True or False == True """)
+    print("only 1 would have to be true to be true. Sort of like the opposite of 'and'.")
+    print("Below is a working example, it will test if either A or B == 10.")
+    #The working code is below.
+    print("Please type your value for A")
+    a = int(input())
+    print("Please type your value for B")
+    b = int(input())
+    if a == 10 or b == 10:
+        print("Atleast 1 of the numbers you entered was 10.")
+    else:
+        print("None of the numbers you entered were 10.")
+    print("\n")
+    play = input(" Hit enter to search for another word.")
+    selector()
+
+def print1():
+    print("\n")
+    print("You would use the 'print' string to ask python to output something you have wrote.")#
+    print("""
+    print("This is what a string looks like")
+    print(f"This is how you write a string that can include variables {variable_name}.)
+    """)
+    #The working code is below.
+    variable_name = "Hello, this is a working variable."
+    print(f"look.. {variable_name}")
+    print("\n")
+    play = input(" Hit enter to search for another word.")
+    selector()
+    print("\n")
+
+def raise1():
+    print("\n")
+    print("You would use 'raise' to raise an exception in the programme.")
+    print("""This is what your code should look like for a cash machine.
+    try:
+        a = int(input())
+        if a>100:
+            raise exception
+        else:
+            print("Thank you, please take your cash.")
+    except:
+        print("The amount exceeds your £100 limit.")
+    """)
+    print("\n")
+    print("Please type in the amount you would like to withdraw - £100 limit.")
+    #The working code is below.
+    try:
+        a = int(input())
+        if a>100:
+            raise exception
+        else:
+            print("Thank you, please take your cash.")
+    except:
+        print("The amount exceeds your £100 limit.")
+
+
+
+    play = input(" Hit enter to search for another word.")
+    selector()
+    print("\n")
+
+def return1():
+    print("\n")
+    print("You can use the return function if you want to call a variable outside of the function it is in.")
+    print("For example, below is a function called pancakes.")
+    print("""
+    def pancakes():
+        cakes = 10
+        return cakes
+
+    # The function above will give us an output of 10.
+
+    pancake_tracker = pancakes() #Here we have created a variable that runs pancakes()
+    print(pancake_tracker)
+
+    # Because we used 'return', when we call the variable pancake_tracker it will
+    run the function and give us an output of '10'
+
+    """)
+    print("\n")
+    play = input(" Hit enter to search for another word.")
+    selector()
+    print("\n")
+
+def try1():
+    print("\n")
+    print("You would use the 'try' function in conjunction with 'try, finally, except.'")
+    print("The try part basically means try to run this code, you would then use finally or execpt as alternatives if it doesn't run.")
+    print("""This can be used a long with 'Try' and 'Except'
+    x = 10
+    try:
+        print(x)
+        print(y)
+    except:
+        print("An exception occurred")
+    finally:
+        print("This will print regardless of whether there is a syntax error or not.")     """)
+    print("\n")
+    #The working code is below.
+    x = 10
+    try:
+        print(x)
+        print(y)
+    except:
+        print("An exception occurred")
+    finally:
+        print("This will print regardless of whether there is a syntax error or not.")
+
+    print("\n")
+    play = input(" Hit enter to search for another word.")
+    selector()
+
+def while1():
+    print("\n")
+    print("While is a type of loop. ")
+    print("A while loop will loop until a certain condition is met.")
+    print(""" In this example we are telling python to loop until the condition gets to 10.
+    condition = 10 #This is just a variable and can be any name.
+    while condition < 10:
+        print(condition)
+        condition += 1  # This is the same as condition = condition + 1.
+            """)
+    print("\n")
+    #The working code is below.
+    condition = 1
+    while condition < 10:
+        print(condition)
+        condition += 1
+
+    print("\n")
+    play = input(" Hit enter to search for another word.")
+    selector()
+
+def with1():
+    print("\n")
+    print("The 'with' statement is used to open files in Python. ")
+    print("The advantage of using the with statement is that the file is closed automatically.")
+    print("""
+    with open("with.txt") as file_obj:
+        for line in file_obj:
+            print(line)
+            """)
+    print("\n")
+
+    with open("with.txt") as file_obj:
+        for line in file_obj:
+            print(line)
+
+    print("\n")
+    play = input(" Hit enter to search for another word.")
+    selector()
+
 
 selector()
