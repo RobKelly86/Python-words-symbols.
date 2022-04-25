@@ -8,7 +8,7 @@ var2 = "This is my second global variable."
 def selector():
     types = ['and', 'as', 'assert', 'pass', 'break', 'class', 'continue', 'def', 'del', 'elif',
      'else', 'except', 'exec', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is',
-     'lambda', 'not', 'or', 'print', 'raise', 'return', 'try', 'while', 'with']
+     'lambda', 'not', 'or', 'print', 'raise', 'return', 'try', 'while', 'with', 'yield']
 
     print("\n")
     print("Python has many symbols and words to learn. This program has been designed to help you if you get stuck.")
@@ -80,6 +80,8 @@ def selector():
         while1()
     elif "with" == choice:
         with1()
+    elif "yield" == choice:
+        yield2()
     else:
         selector()
 
@@ -789,5 +791,37 @@ def with1():
     play = input(" Hit enter to search for another word.")
     selector()
 
+def yield1():
+    #The working code is below.
+    print("\n")
+    yield 9000
+    yield 8000
+    yield ['You', 'Can', 'Yield', 'From', 'A', 'List']
+    yield 7000
+
+def yield2():
+    print("\n")
+    print("Yield from. This is a syntax that allows you to use delegation from generators.")
+    print("It allows you to generate from multiple lists within the same loop.")
+    print("""
+    def yield1():
+        yield 9000
+        yield 8000
+        yield ['You', 'Can', 'Yield', 'From', 'A', 'List']
+        yield 7000
+    # Above would be in its own function
+
+    # Below is how you call the list in another function.
+    for thing in yield1():
+        print(f"Testing, testing.. {thing}")    """)
+
+    #The working code is below and in the function def yield2()
+    print("\n")
+    for thing in yield1():
+        print(f"Testing, testing.. {thing}")
+
+    print("\n")
+    play = input(" Hit enter to search for another word.")
+    selector()
 
 selector()
